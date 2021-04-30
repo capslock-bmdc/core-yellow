@@ -9,4 +9,7 @@ class GeneralConsts {
 
   // env
   static final String appId = env['APP_ID'] ?? '';
+
+  // storage
+  static const String STORAGE_USER = 'storage_user';
 }

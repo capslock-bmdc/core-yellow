@@ -12,6 +12,13 @@ class UserApi {
     );
     return response;
   }
+
+  Future<Response> get(String userId, String token) async {
+    Response response = await api.dio.get(
+      '${ApiConsts.USERS_URL}/$userId',
+    );
+    return response;
+  }
 }
 
 final UserApi userApi = UserApi();

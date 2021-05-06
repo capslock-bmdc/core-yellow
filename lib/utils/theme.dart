@@ -40,6 +40,11 @@ class ThemeUtil {
           fontWeight: FontWeight.w900,
           color: ThemeConsts.DARK_TEXT_COLOR,
         ),
+        headline2: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.w400,
+          color: ThemeConsts.DARK_TEXT_COLOR,
+        ),
         button: TextStyle(
           height: 0.9,
           fontSize: 18,

@@ -28,9 +28,9 @@ class ThemeConsts {
   // shadows
   static const List<BoxShadow> OUTER_SHADOW = [
     BoxShadow(
-      color: Color(0x33000000),
-      spreadRadius: 1.0,
-      blurRadius: 5.0,
+      color: Color(0x22000000),
+      spreadRadius: 3.0,
+      blurRadius: 10.0,
     ),
   ];
 
@@ -40,4 +40,8 @@ class ThemeConsts {
   static const double L_ICON_SIZE = 36;
   static const double LOADING_SIZE = 36;
   static const double APP_ICON_SIZE = 36;
+  static const double DHASHBOARD_HEADER_HEIGHT = 250;
+  static const double DHASHBOARD_USER_CARD_SPACEING = 180;
+  static const double DHASHBOARD_USER_PROFILE_SIZE = 110;
+  static const double DASHBOARD_APP_CARD_SIZE = 160;
 }

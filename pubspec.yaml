@@ -20,6 +20,7 @@ dependencies:
   dio: ^4.0.0-prev3
   flutter_dotenv: ^4.0.0-nullsafety.1
   flutter_secure_storage: ^4.1.0
+  jwt_decoder: ^2.0.1
 
 dev_dependencies:
   flutter_test:

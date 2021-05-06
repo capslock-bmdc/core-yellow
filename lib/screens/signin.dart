@@ -24,7 +24,7 @@ class _SigninScreenState extends State<SigninScreen> {
   void _onSentEmail(BuildContext context) async {
     setState(() => _loading = true);
     try {
-      User user = User(email: _email, id: '608b1ea6b175de8bf7fc10ba');
+      User user = User(email: _email);
       await storageUtil.setUser(user);
       await api.auth.tokenGet(_email);
     } catch (e) {}

@@ -7,6 +7,7 @@ import 'package:yellow_app/consts/theme.dart';
 import 'package:yellow_app/models/user.dart';
 import 'package:yellow_app/screens/dashboard.dart';
 import 'package:yellow_app/screens/splash.dart';
+import 'package:yellow_app/utils/jwt.dart';
 import 'package:yellow_app/utils/storage.dart';
 import 'package:yellow_app/widgets/core/app_icon.dart';
 import 'package:yellow_app/widgets/core/button.dart';
@@ -25,8 +26,10 @@ class _SentScreenState extends State<SentScreen> {
   void _onGotToken(BuildContext context) async {
     setState(() => _loading = true);
     try {
+      Map<String, dynamic> decodedToken = jwtUtil.decode(_token);
       User user = await storageUtil.getUser();
-      user = user.clone(token: _token);
+      String id = decodedToken['userId'];
+      user = user.clone(token: _token, id: id);
       await storageUtil.setUser(user);
       if (user.id != null) {
         Response res = await api.user.get(user.id!, _token);
